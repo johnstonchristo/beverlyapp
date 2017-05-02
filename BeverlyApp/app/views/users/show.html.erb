@@ -1,0 +1,13 @@
+<h1><%= @user.firstname %></h1>
+<p>
+    Password Digest:<%= @user.password_digest %>
+  </p>
+
+  <h3><%= link_to "New Journal", "/journals/new" %></h3>
+
+  <h3>Your Journals</h3>
+  <% @user.journals.each do |journal| %>
+    <p>
+      <%= link_to(journal.journal_title, journal_path(journal))%>
+    </p>
+  <% end %>

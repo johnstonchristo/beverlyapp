@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  journal_title: MyText
+  number_of_entries: 1
+  time_period: MyText
+  word_count: 1
+  user_id: MyText
+
+two:
+  journal_title: MyText
+  number_of_entries: 1
+  time_period: MyText
+  word_count: 1
+  user_id: MyText

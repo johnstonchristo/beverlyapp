@@ -1,0 +1,16 @@
+<h1><%= @journal.journal_title %></h1>
+
+<!-- All Journal posts for this journal go here -->
+
+<%= hidden_field(:post_id, :value=>@journal.id ) %>
+
+<h3><%= link_to "Post", "/posts/new" %></h3>
+
+
+
+<h3>Posts in this journal</h3>
+<% @journal.posts.each do |post| %>
+  <p>
+    <%= link_to(post.post_title, post_path(post))%>
+  </p>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>create journal</h1>
+
+<%= form_for @journal do |f| %>
+
+<p>
+
+  <%= f.label :journal_title %>
+  <%= f.text_field :journal_title, required: true %>
+</p>
+
+<p>
+<%= f.label :number_of_entries %>
+<%= f.text_field :number_of_entries, required: true %>
+</p>
+
+<p>
+<%= f.label :time_period %>
+<%= f.text_field :time_period, required: true %>
+</p>
+
+<p>
+<%= f.label :word_count %>
+<%= f.text_field :word_count, required: true %>
+</p>
+
+
+<%= f.submit %>
+
+<% end %>
