@@ -1,0 +1,23 @@
+<h1 class= "login">Beverly</h1>
+<h2 class= "login_h2">creating good habits.</h2>
+
+<% if flash[:login_error]  %>
+<p>
+<%= flash[:login_error] %>
+</p>
+<% end  %>
+
+<%= form_tag '/login' do %>
+
+<div class = "input-field inline 1">
+<p><%= label_tag :email %><%= email_field_tag :email %> </p>
+</div>
+
+<div class = "input-field inline 2">
+<p><%= label_tag :password %><%= password_field_tag :password %></p>
+</div>
+
+<%= submit_tag "login" %>
+
+
+<% end  %>

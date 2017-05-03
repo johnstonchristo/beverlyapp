@@ -1,0 +1,19 @@
+<h1>create journal</h1>
+
+<%= form_for @journal do |f| %>
+
+<p>
+  <%= f.label :journal_title, "Name of your journal:" %>
+  <%= f.text_field :journal_title, required: true %>
+</p>
+
+<p>
+I want to write
+<%= f.text_field :number_of_entries, required: true %>
+posts in my journal per <%= f.text_field :time_period, required: true %>.  Each post should be <%= f.text_field :word_count, required: true %> words.
+</p>
+
+
+<%= f.submit %>
+
+<% end %>

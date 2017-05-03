@@ -1,0 +1,23 @@
+
+<%= form_for @post do |f| %>
+
+<div class = "input_field">
+
+  <%= f.label :post_title %>
+  <%= f.text_field :post_title, required: true %>
+</p>
+
+<p>
+<%= f.label :post_content %>
+<%= f.text_area :post_content, required: true %>
+</p>
+
+<!-- <%= f.label :journal_id %> -->
+<%= f.hidden_field :journal_id, :value => params["journal"] %>
+</div>
+
+<%= f.submit %>
+
+<% end %>
+
+</body>
